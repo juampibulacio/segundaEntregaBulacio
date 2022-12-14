@@ -31,6 +31,7 @@ rechazanMascotas.push(new Casa("Sergio Chejfec 96", 8, 5, 3500, false, "con pile
 
 alert("Bienvenido");
 
+
 let viajaConMascota = prompt("¿Viaja con mascota? (sí/no)")
 
 //Muestro las opciones de los arrays según su respuesta
@@ -78,8 +79,8 @@ if (casaElegida <= 4) {
     let casaEncontrada = aceptanMascotas.find(edificio => edificio.id == casaElegida) ;
     let precioTotal = Total(casaEncontrada.precio, diasTotales);
     alert("El precio total por " + diasTotales + " días de alojamiento en la opción elegida (" + casaElegida + ") sería de " + precioTotal + " pesos.")
-} else if (casaElegida > 4) {
+} else if (casaElegida > 4 && casaElegida <= 8) {
     let casaEncontrada = rechazanMascotas.find(edificio => edificio.id == casaElegida) ;
     let precioTotal = Total(casaEncontrada.precio, diasTotales);
     alert("El precio total por " + diasTotales + " días de alojamiento en la opción elegida (" + casaElegida + ") sería de " + precioTotal + " pesos.")
-}
+} else {alert("hubo un error, intentelo de nuevo con una opción válida")};
